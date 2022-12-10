@@ -15,8 +15,8 @@ def put_symbol(field,choise,who):
         sym='X'
     else:
         sym='O'
-    while field[choise] =='X' or field[choise]=='O':
-        print('Ячейка уже занята, выбери другую.')
+    while field[choise] =='X' or field[choise]=='O' or choise>9 or choise<1:
+        print('Ячейка занята, либо не существует, выбери другую.')
         choise=int(input(f'Игрок {whos_move} выбирает ячейку: '))
     field[choise]=sym
     return field
